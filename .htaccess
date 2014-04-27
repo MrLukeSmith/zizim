@@ -1,15 +1,10 @@
 
-
 RewriteEngine on
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     
-    # Makes root of your site not to redirect to parser:
-RewriteCond %{REQUEST_URI} !^/$            
+    RewriteCond %{REQUEST_URI} !^/$            
 
-# Same for mypage.php
-RewriteCond %{REQUEST_URI} !^/transfer.php$
+    RewriteCond %{REQUEST_URI} !^/transfer.php$
 
-# testdir and all files in it are not redirected to parser
-RewriteCond %{REQUEST_URI} !^/testdir/
-RewriteRule (.*) /transfer.php?q=$1 [L,QSA]
+    RewriteRule (.*) /transfer.php?q=$1 [L,QSA]
