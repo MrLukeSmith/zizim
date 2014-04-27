@@ -1,0 +1,62 @@
+body {
+  background: #333;
+  font-family: "Arial", Tahoma, sans-serif;
+  color: #FFF;
+}
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto; 
+  padding: 10px;
+  text-align: center;
+}
+
+input, button {
+  margin: 0 auto;
+  display:block;
+  padding: 10px;
+  font-size: 24px; 
+  width: 400px;
+}
+
+button { margin-bottom: 10px; }
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header, footer, article { display: block; }
+
+h1 { font-size: 72px; color: #ef520d; margin: 0 0 10px 0; font-weight: normal; }
+h2 { margin: 10px 0; font-weight: normal; }
+p { padding: 5px; color: #555; margin: 0 0 10px 0; }
+
+.custom_alias_wrapper { width: 400px; margin: 0 auto; }
+.custom_alias_wrapper input { width: 380px; }
+.custom_alias_wrapper h2.switch { font-size: 20px; background: #ef520d; margin-bottom: 10px; padding: 10px; }
+.custom_alias_wrapper h2.switch:hover { cursor: pointer; background: #444; color: #ef520d; }
+.custom_alias_wrapper h2.switch span { display:block; font-size: 14px; font-weight: normal; }
+
+.custom_alias { padding: 10px; background: #ef520d; border: 1px solid #444; margin: 10px 0; display: none; }
+.custom_alias h2 { margin: 0 0 10px 0; color: #333; }
+
+.loader { display: none; }
+
+.result { display: none; }
+.url { display: block; padding: 10px; background: #ef520d; margin-bottom: 10px; font-size: 20px; }
+
+.error { display: none; background: red; padding: 10px; width: 380px; margin: 0 auto; color: #FFF; text-transform: uppercase; font-size: 12px; margin-bottom: 10px; }
+
+footer { font-size: 12px; color: #555; }
+
+@media all and (max-width: 960px) {
+  #wrapper { width: 95%; }
+  form input, .custom_alias_wrapper, button { width: 50%; margin: 0 auto; }
+  .custom_alias_wrapper input { width: 100%; }
+  .error { width: 50%; }
+}
+
+
+@media all and (max-width: 768px) {
+  form input, .custom_alias_wrapper, .custom_alias_wrapper input, button { width: 100%; margin: 0 auto; }
+  .error { width: auto; }
+}
