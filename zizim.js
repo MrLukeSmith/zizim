@@ -97,7 +97,7 @@ function generateURL( url ){
     }
 
     $.ajax({
-      url: "backend.php?action=generate"+alias,
+      url: "backend.php?action=generate&url=" + url + "" + alias,
       async: false
     }).done(function( data ) {
       

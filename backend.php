@@ -72,13 +72,11 @@
 
         $add_new_url = "INSERT INTO `url` (`url`, `shortcut`, `alias`, `ip`) VALUES ('$url', '$shortcode', '$alias', '$ip')" or die("Error adding shortcut." . mysqli_error($link));
 
-        echo json_encode( array('original' => $url, 'shortened' => $shorturl) );
-
-        // if (mysqli_query($link, $add_new_url)){
-        //   echo json_encode( array('original' => $url, 'shortened' => $shorturl) );
-        // } else {
-        //   echo json_encode( array('error' => 'Sorry, that didn\'t quite work as planned. Please try again.') );
-        // }
+        if (mysqli_query($link, $add_new_url)){
+          echo json_encode( array('original' => $url, 'shortened' => $shorturl) );
+        } else {
+          echo json_encode( array('error' => 'Sorry, that didn\'t quite work as planned. Please try again.') );
+        }
 
         break;
 

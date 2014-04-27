@@ -12,17 +12,6 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
-    <!--
-
-    Apple icons
-    Favicon
-    Google Analytics
-    Facebook Like / Tweet Button
-
-    Store previously created shortcuts in a cookie? Show them on the homepage? 
-  
-    -->
-
   </head>
 
   <body>
@@ -41,7 +30,7 @@
           <span class="error">TEST</span>
           <input type="text" name="URL" id="URL" placeholder="http://" <? if ($_POST){ echo "value=\"".$_POST['URL']."\""; } ?> />
           <div class="custom_alias_wrapper">
-            <h2 class="switch">Create a custom URL<span>Click here to add an alias to your shortened URL.<br>(e.g. ziz.im/customalias</span></h2>
+            <h2 class="switch">Create a custom URL<span>Click here to add an alias to your shortened URL.<br>(e.g. ziz.im/customalias)</span></h2>
             <div class="custom_alias">
               <h2>What would you like to set as your URL's alias?</h2>
               <input type="text" size="20" name="alias" id="alias" placeholder="alias" <? if ($_POST){ echo "value=\"".$_POST['alias']."\""; } ?> />
